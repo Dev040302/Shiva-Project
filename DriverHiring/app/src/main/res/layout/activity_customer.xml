@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Customer_login">
+
+
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:src="@drawable/splashh"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/img"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img"
+        android:text="Login"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/title"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="25dp"
+        android:inputType="textEmailAddress"
+        android:hint="    Email"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:id="@+id/emailedittxt"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailedittxt"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="25dp"
+        android:inputType="textPassword"
+        android:hint="    Password"
+        android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
+        android:id="@+id/passwordedittxt"/>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:id="@+id/loginbtn"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="28dp"
+        android:backgroundTint="@color/purple_500"
+        android:layout_width="320dp"
+        android:layout_height="62dp"
+        android:layout_centerHorizontal="true"
+        android:text="LOGIN"
+        android:drawableLeft="@drawable/ic_baseline_login_24"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:layout_below="@id/passwordedittxt"/>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:id="@+id/signupbtn"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="28dp"
+        android:backgroundTint="@color/purple_500"
+        android:layout_width="320dp"
+        android:layout_height="62dp"
+        android:layout_centerHorizontal="true"
+        android:text="SIGNUP"
+        android:drawableLeft="@drawable/ic_baseline_create_new_folder_24"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:layout_below="@id/loginbtn"/>
+
+
+
+
+
+</RelativeLayout>

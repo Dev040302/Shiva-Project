@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainMenu">
+
+    <ImageView
+        android:id="@+id/titleimg"
+        android:layout_width="match_parent"
+        android:layout_height="306dp"
+        android:layout_marginHorizontal="15dp"
+        android:src="@drawable/splashh"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DRIVER HIRING"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/titleimg"
+        android:layout_marginBottom="15dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:id="@+id/driverbtn"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="28dp"
+        android:backgroundTint="@color/purple_500"
+        android:layout_width="320dp"
+        android:layout_height="62dp"
+        android:layout_centerHorizontal="true"
+        android:text="DRIVER"
+        android:drawableLeft="@drawable/ic_baseline_drive_eta_24"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:layout_below="@id/title"/>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:id="@+id/customerbtn"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="28dp"
+        android:backgroundTint="@color/purple_500"
+        android:layout_width="320dp"
+        android:layout_height="62dp"
+        android:layout_centerHorizontal="true"
+        android:text="CUSTOMER"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:layout_below="@id/driverbtn"/>
+
+
+</RelativeLayout>

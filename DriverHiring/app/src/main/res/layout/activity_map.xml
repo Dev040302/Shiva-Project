@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Map" >
+
+    <LinearLayout
+
+        android:id="@+id/Txtviews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:weightSum="100"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="From"
+            android:layout_weight="50"
+            android:id="@+id/from12345678"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="TO"
+            android:layout_weight="50"
+            android:id="@+id/to"
+            />
+
+
+
+    </LinearLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@id/end"
+    android:layout_alignParentBottom="true">
+
+    <LinearLayout
+        android:id="@+id/ends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/fromdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="From Date"
+            android:layout_weight="50"
+            android:inputType="date"
+            android:focusable="false"/>
+
+
+        <EditText
+            android:id="@+id/todate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="To Date"
+            android:layout_weight="50"
+            android:inputType="date"
+            android:focusable="false"/>
+    </LinearLayout>
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REQUEST DRIVER"
+        android:id="@+id/req_btn"
+        android:layout_below="@id/time"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/time"
+        android:layout_below="@id/ends"
+        android:hint="TIME"
+        android:inputType="time"
+        android:textAlignment="center"/>
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Txtviews"
+        android:layout_above="@id/end"
+        android:id="@+id/maps">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

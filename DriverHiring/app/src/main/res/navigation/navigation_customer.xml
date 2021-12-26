@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_customer"
+    app:startDestination="@id/cus_Login">
+
+    <fragment
+        android:id="@+id/cus_Login"
+        android:name="com.example.driverhiring.Cus_Login"
+        android:label="fragment_cus__login"
+        tools:layout="@layout/fragment_cus__login" >
+        <action
+            android:id="@+id/action_cus_Login_to_dri_Login3"
+            app:destination="@id/dri_Login3" />
+    </fragment>
+    <fragment
+        android:id="@+id/dri_Login3"
+        android:name="com.example.driverhiring.Dri_Login"
+        android:label="fragment_dri__login"
+        tools:layout="@layout/fragment_dri__login" />
+</navigation>
