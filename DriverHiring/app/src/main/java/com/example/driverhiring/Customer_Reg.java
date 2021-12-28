@@ -36,6 +36,8 @@ public class Customer_Reg extends AppCompatActivity {
         Cregister=(Button)findViewById(R.id.signupbtn);
         Cusdb=FirebaseAuth.getInstance();
 
+        
+
         Cregister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
