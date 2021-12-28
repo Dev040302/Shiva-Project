@@ -92,7 +92,7 @@ public class orderAdapter extends FirebaseRecyclerAdapter<
                 myRef.child("Stop").setValue(holder.Stop);
                 myRef.child("Driver").setValue(FirebaseAuth.getInstance().getCurrentUser().getUid());
 
-                FirebaseDatabase.getInstance().getReference("Pair").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(holder.customerid);
+                FirebaseDatabase.getInstance().getReference("Pair").child(holder.customerid).setValue(FirebaseAuth.getInstance().getCurrentUser().getUid());
                 Intent intent=new Intent(v.getContext(),Customer_Booking.class);
                 intent.putExtra("uuid",holder.customerid);
 

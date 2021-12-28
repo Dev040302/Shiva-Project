@@ -4,94 +4,166 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
     tools:context=".Driver_Reg">
 
-    <EditText
-        android:id="@+id/licence"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/address"
-        android:layout_marginHorizontal="15dp"
-        android:drawableLeft="@drawable/ic_baseline_person_24"
-        android:hint="LICENCE" />
-
-    <EditText
-        android:id="@+id/address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/number"
-        android:layout_marginHorizontal="15dp"
-        android:drawableLeft="@drawable/ic_baseline_person_24"
-        android:hint="ADDRESS" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/licence"
-        android:layout_marginHorizontal="15dp"
-        android:drawableLeft="@drawable/ic_baseline_person_24"
-        android:hint="PASSWORD" />
-
-    <EditText
-        android:id="@+id/number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/email"
-        android:layout_marginHorizontal="15dp"
-        android:drawableLeft="@drawable/ic_baseline_person_24"
-        android:hint="PHONE NUMBER" />
-
-    <ImageView
-        android:id="@+id/title"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:text="DRIVER"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/owner" />
+        android:layout_marginTop="16dp"
+        android:id="@+id/title" />
 
     <TextView
-        android:id="@+id/titletxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/title"
+        android:text="SIGN UP"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         android:layout_centerHorizontal="true"
-        android:text="CUSTOMER REGISTRATION"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+        android:id="@+id/title1"
+        android:layout_marginBottom="16dp"/>
 
-    <EditText
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
-        android:layout_below="@id/titletxt"
-        android:drawableLeft="@drawable/ic_baseline_person_24"
-        android:id="@+id/name"
-        android:hint="NAME"/>
+        android:layout_below="@id/title1"
+        android:layout_above="@id/signupbtn">
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/name"
-        android:layout_marginHorizontal="15dp"
-        android:drawableLeft="@drawable/ic_baseline_person_24"
-        android:hint="EMAIL" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="16dp"
+                android:inputType="text"
+                android:cursorVisible="false"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:hint="  Name"
+                android:padding="8dp"
+                android:background="@drawable/btn_sign_in_background"
+                android:textColorHint="@color/white"
+                android:id="@+id/name"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="8dp"
+                android:inputType="textEmailAddress"
+                android:cursorVisible="false"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:drawableLeft="@drawable/ic_baseline_email_24"
+                android:hint="  Email"
+                android:padding="8dp"
+                android:background="@drawable/btn_sign_in_background"
+                android:textColorHint="@color/white"
+                android:id="@+id/email"
+                android:layout_below="@id/name"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="8dp"
+                android:inputType="phone"
+                android:cursorVisible="false"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:drawableLeft="@drawable/ic_baseline_phone_android_24"
+                android:hint="  Phone"
+                android:padding="8dp"
+                android:background="@drawable/btn_sign_in_background"
+                android:textColorHint="@color/white"
+                android:id="@+id/number"
+                android:layout_below="@id/email"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="8dp"
+                android:inputType="text"
+                android:cursorVisible="false"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:drawableLeft="@drawable/ic_baseline_home_24"
+                android:hint="  Address"
+                android:padding="8dp"
+                android:background="@drawable/btn_sign_in_background"
+                android:textColorHint="@color/white"
+                android:id="@+id/address"
+                android:layout_below="@id/number"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="8dp"
+                android:inputType="text"
+                android:cursorVisible="false"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:drawableLeft="@drawable/ic_baseline_card_membership_24"
+                android:hint="  Licence No"
+                android:padding="8dp"
+                android:background="@drawable/btn_sign_in_background"
+                android:textColorHint="@color/white"
+                android:id="@+id/licence"
+                android:layout_below="@id/address"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="8dp"
+                android:inputType="text"
+                android:cursorVisible="false"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
+                android:hint="  Password"
+                android:padding="8dp"
+                android:background="@drawable/btn_sign_in_background"
+                android:textColorHint="@color/white"
+                android:id="@+id/password"
+                android:layout_below="@id/licence"/>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
 
     <com.google.android.material.button.MaterialButton
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
         android:id="@+id/signupbtn"
-        android:layout_marginTop="16dp"
-        app:cornerRadius="28dp"
-        android:backgroundTint="@color/purple_500"
-        android:layout_width="320dp"
-        android:layout_height="62dp"
-        android:layout_centerHorizontal="true"
-        android:text="SIGNUP"
-        android:drawableLeft="@drawable/ic_baseline_create_new_folder_24"
-        android:textSize="24sp"
-        android:textColor="@color/white"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="25dp"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#DD4B39"
+        android:text="SIGN UP"
+        android:textColor="@color/white"
+        app:cornerRadius="8dp" />
+
+
 
 </RelativeLayout>
 

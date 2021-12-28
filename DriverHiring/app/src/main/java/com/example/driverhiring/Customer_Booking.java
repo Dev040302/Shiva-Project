@@ -42,6 +42,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -76,7 +77,7 @@ public class Customer_Booking extends AppCompatActivity implements OnMapReadyCal
     Button btn;
 
 
-    int value=1;
+    int value=1,done=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,6 +104,9 @@ public class Customer_Booking extends AppCompatActivity implements OnMapReadyCal
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 cusname = snapshot.child("name").getValue(String.class);
                 cusnumber = snapshot.child("phone").getValue(String.class);
+                name.setText("Name :- "+ cusname);
+                phone.setText("Number :-"+ cusnumber);
+                Toast.makeText(Customer_Booking.this, cusname + " " + cusnumber, Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -123,6 +127,7 @@ public class Customer_Booking extends AppCompatActivity implements OnMapReadyCal
 
                 start = new LatLng(a,b);
                 driver = new LatLng(a,b);
+                stop = new LatLng(a,b);
 
                 startmar = mMap.addMarker(new MarkerOptions()
                         .position(start).title("Start Position")
@@ -131,6 +136,8 @@ public class Customer_Booking extends AppCompatActivity implements OnMapReadyCal
                 drivermar = mMap.addMarker(new MarkerOptions()
                         .position(start).title("Driver")
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+
+                done=1;
 
             }
 
@@ -210,10 +217,24 @@ public class Customer_Booking extends AppCompatActivity implements OnMapReadyCal
 
         ref.child("Driver's Position").setValue(driver);
 
-        drivermar.setPosition(driver);
+        if(done==1){
+            drivermar.setPosition(driver);
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(driver));
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
+            LatLngBounds llb;
+
+            LatLngBounds.Builder builder = new LatLngBounds.Builder();
+            builder.include(driver).include(start).include(stop);
+            llb = builder.build();
+
+            mMap.moveCamera(CameraUpdateFactory.newLatLngBounds(llb,1));
+        }
+
+
+
+
+
+        //mMap.moveCamera(CameraUpdateFactory.newLatLng(driver));
+        //mMap.animateCamera(CameraUpdateFactory.zoomTo(10));
 
     }
 

@@ -35,6 +35,29 @@
         <entry key="..\:/Android_call/DriverHiring/app/src/main/res/layout/cards.xml" value="0.26875" />
         <entry key="..\:/Android_call/DriverHiring/app/src/main/res/layout/fragment_cus__login.xml" value="0.2359375" />
         <entry key="..\:/Android_call/DriverHiring/app/src/main/res/layout/fragment_dri__login.xml" value="0.25" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/drawable-v24/ic_baseline_access_time_24.xml" value="0.14375" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/drawable-v24/ic_baseline_add_photo_alternate_24.xml" value="0.25052083333333336" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/drawable-v24/ic_baseline_add_task_24.xml" value="0.25052083333333336" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/drawable-v24/ic_baseline_card_membership_24.xml" value="0.25052083333333336" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/drawable-v24/ic_baseline_do_not_disturb_24.xml" value="0.25052083333333336" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/drawable-v24/ic_baseline_drive_eta_24.xml" value="0.25052083333333336" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/drawable-v24/ic_baseline_email_24.xml" value="0.25052083333333336" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/drawable-v24/ic_baseline_fiber_new_24.xml" value="0.14375" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/drawable-v24/ic_baseline_home_24.xml" value="0.25052083333333336" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/drawable-v24/ic_baseline_location_on_24.xml" value="0.25052083333333336" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/drawable-v24/ic_baseline_perm_identity_24.xml" value="0.25052083333333336" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/drawable-v24/ic_baseline_person_24.xml" value="0.25052083333333336" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/drawable-v24/ic_baseline_phone_android_24.xml" value="0.25052083333333336" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/drawable-v24/ic_baseline_vpn_key_24.xml" value="0.25052083333333336" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/drawable/btn_sign_in_background.xml" value="0.25052083333333336" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/drawable/google_logo.xml" value="0.152" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_booking.xml" value="0.25" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_customer.xml" value="0.234375" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_customer_reg.xml" value="0.234375" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_driver.xml" value="0.25" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_driver_bookings.xml" value="0.25" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_driver_reg.xml" value="0.234375" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_map.xml" value="0.25" />
       </map>
     </option>
   </component>
