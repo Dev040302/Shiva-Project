@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.driverhiring">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -18,8 +17,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DriverHiring">
+        <activity
+            android:name=".History"
+            android:exported="false" />
+        <activity
+            android:name=".Edit_Profile"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".View_Profile"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
 
-      
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
@@ -27,11 +36,7 @@
         <activity
             android:name=".Map"
             android:exported="false"
-            android:label="@string/title_activity_map" >
-
-
-
-        </activity>
+            android:label="@string/title_activity_map" />
         <activity
             android:name=".start"
             android:exported="false"
@@ -49,7 +54,8 @@
             android:exported="false" />
         <activity
             android:name=".Driver_Bookings"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".Customer_Reg"
             android:exported="false" />

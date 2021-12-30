@@ -1,6 +1,7 @@
 package com.example.driverhiring;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
@@ -37,7 +38,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
-public class Map extends FragmentActivity implements OnMapReadyCallback {
+public class Map extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private ActivityMapBinding binding;

@@ -14,28 +14,28 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:id="@+id/ll"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="15dp"
+            android:layout_below="@id/ll1"
+            android:layout_marginLeft="16dp"
             android:layout_alignParentLeft="true">
 
             <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:id="@+id/fromdate"
             android:textColor="@color/black"/>
 
             <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:text=" - "
             android:textColor="@color/black"/>
 
             <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:id="@+id/todate"
             android:textColor="@color/black"/>
 
@@ -47,9 +47,9 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:id="@+id/ll1"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="15dp"
-            android:layout_alignParentRight="true">
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_alignParentTop="true">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -81,7 +81,9 @@
             android:textSize="10dp"
             android:id="@+id/pickuptime"
             android:textColor="@color/black"
-            android:layout_marginLeft="15dp"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
 
             />
 

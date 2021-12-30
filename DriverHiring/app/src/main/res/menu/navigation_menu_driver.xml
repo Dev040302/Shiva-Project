@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/nav_profile"
+        android:title="View Profile" />
+
+    <item
+        android:id="@+id/nav_edit_profile"
+        android:title="Edit Profile" />
+
+    <item
+        android:id="@+id/nav_History"
+        android:title="History"/>
+
+    <item
+        android:id="@+id/nav_change_password"
+        android:title="Change Password"
+        />
+
+    <item
+        android:id="@+id/nav_Logout"
+        android:title="Log out" />
+
+</menu>
