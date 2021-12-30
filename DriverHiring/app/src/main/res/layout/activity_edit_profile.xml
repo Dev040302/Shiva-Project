@@ -43,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/title"
-            android:layout_above="@id/signupbtn">
+            android:layout_above="@id/updatebtn">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -126,7 +126,7 @@
         </ScrollView>
 
         <Button
-            android:id="@+id/signupbtn"
+            android:id="@+id/updatebtn"
             android:layout_width="match_parent"
             android:layout_height="42dp"
             android:layout_alignParentBottom="true"
@@ -135,7 +135,7 @@
             android:layout_marginVertical="16dp"
             android:layout_marginTop="16dp"
             android:backgroundTint="#DD4B39"
-            android:text="SIGN UP"
+            android:text="UPDATE"
             android:textColor="@color/white" />
 
 

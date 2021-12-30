@@ -26,9 +26,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class View_Profile extends AppCompatActivity {
-
-    MenuItem history;
+    
     String Type,Uid;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,11 +51,22 @@ public class View_Profile extends AppCompatActivity {
         TextView address=findViewById(R.id.address);
         TextView password=findViewById(R.id.password);
         TextView licence=findViewById(R.id.licence);
+        
+        Intent i=getIntent();
+        Type = i.getStringExtra("Type");
+        Uid = i.getStringExtra("uid");
+        
+        if(Type == "Drivers"){
+            navigationView.getMenu().clear();
+            navigationView.inflateMenu(R.menu.navigation_menu_driver);
+        }
+        else{
+            navigationView.getMenu().clear();
+            navigationView.inflateMenu(R.menu.navigation_menu_customer);
+        }
 
 
-
-
-        FirebaseDatabase.getInstance().getReference("Users").child("Drivers").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
+        FirebaseDatabase.getInstance().getReference("Users").child(Type).child(Uid).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String nametxt= snapshot.child("name").getValue(String.class);
@@ -101,18 +112,26 @@ public class View_Profile extends AppCompatActivity {
                 {
 
                     case R.id.nav_profile:
-                        Intent intent = new Intent(View_Profile.this,View_Profile.class);
+                        intent = new Intent(View_Profile.this,View_Profile.class);
+                        intent.putExtra("Type","Drivers");
+                        intent.putExtra("uid",FirebaseAuth.getInstance().getCurrentUser().getUid());
                         startActivity(intent);
                         break;
                     case R.id.nav_edit_profile:
                         intent = new Intent(View_Profile.this, Edit_Profile.class);
+                        intent.putExtra("Type","Drivers");
+                        intent.putExtra("uid",FirebaseAuth.getInstance().getCurrentUser().getUid());
                         startActivity(intent);
                         break;
                     case R.id.nav_Logout:
-                        FirebaseAuth.getInstance().signOut();break;
+
+                        FirebaseAuth.getInstance().signOut();
+                        startActivity(new Intent(View_Profile.this,MainMenu.class));
+                        break;
+
                     case R.id.nav_change_password:
 
-                        auth.sendPasswordResetEmail((String) email.getText())
+                        FirebaseAuth.getInstance().sendPasswordResetEmail((String) email.getText())
                                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
@@ -124,7 +143,9 @@ public class View_Profile extends AppCompatActivity {
                         break;
 
                     case R.id.nav_History:
-                        Toast.makeText(View_Profile.this, "History",Toast.LENGTH_SHORT).show();break;
+                        intent = new Intent(View_Profile.this, History.class);
+                        intent.putExtra("uid",FirebaseAuth.getInstance().getCurrentUser().getUid());
+                        startActivity(intent);
                     default:
                         return true;
 

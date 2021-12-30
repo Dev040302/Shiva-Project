@@ -18,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Driver_Reg extends AppCompatActivity {
 
-    EditText Demail,Dname,Dphone,Dpassword,Dlicence,Dexperince,Daddress;
+    EditText Demail,Dname,Dphone,Dpassword,Dlicence,Daddress;
     Button Dregister;
     FirebaseAuth DrDB;
 

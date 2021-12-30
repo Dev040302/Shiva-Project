@@ -9,6 +9,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,13 +21,14 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class Edit_Profile extends AppCompatActivity {
-
-    MenuItem history;
+    
     String Type,Uid;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +44,27 @@ public class Edit_Profile extends AppCompatActivity {
 
         FirebaseAuth auth = FirebaseAuth.getInstance();
 
+        Intent i=getIntent();
+        Type = i.getStringExtra("Type");
+        Uid = i.getStringExtra("uid");
 
-        FirebaseDatabase.getInstance().getReference("Users").child("Drivers").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
+        EditText Pname=(EditText)findViewById(R.id.name);
+        EditText Pphone=(EditText)findViewById(R.id.number);
+        EditText Plicence=(EditText)findViewById(R.id.licence);
+        EditText Paddress=(EditText)findViewById(R.id.address);
+        Button btn = findViewById(R.id.updatebtn);
+
+        if(Type == "Drivers"){
+            navigationView.getMenu().clear();
+            navigationView.inflateMenu(R.menu.navigation_menu_driver);
+        }
+        else{
+            navigationView.getMenu().clear();
+            navigationView.inflateMenu(R.menu.navigation_menu_customer);
+        }
+
+
+        FirebaseDatabase.getInstance().getReference("Users").child(Type).child(Uid).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String nametxt= snapshot.child("name").getValue(String.class);
@@ -69,6 +91,57 @@ public class Edit_Profile extends AppCompatActivity {
             }
         });
 
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String name = Pname.getText().toString().trim();
+                String phone =Pphone.getText().toString().trim();
+                String address=Paddress.getText().toString().trim();
+                String licence=Plicence.getText().toString().trim();
+
+                if(name.isEmpty()){
+                    Pname.setError("name is required");
+                    Pname.requestFocus();
+                    return;
+                }
+
+                if(phone.isEmpty()){
+                    Pphone.setError("Enter the phone number");
+                    Pphone.requestFocus();
+                    return;
+                }
+                if(address.isEmpty()){
+                    Paddress.setError("Enter the address");
+                    Paddress.requestFocus();
+                    return;
+                }
+                if(Type=="Drivers") {
+                    if (licence.isEmpty()) {
+                        Plicence.setError("Enter the licence number");
+                        Plicence.requestFocus();
+                        return;
+                    }
+                    if (licence.length() != 15) {
+                        Plicence.setError("Enter correct licence number");
+                        Plicence.requestFocus();
+                        return;
+                    }
+                }
+
+                DatabaseReference Ref = FirebaseDatabase.getInstance().getReference("Users").child(Type).child(Uid);
+                Ref.child("name").setValue(name);
+                Ref.child("phone").setValue(phone);
+                Ref.child("address").setValue(address);
+
+                if (Type=="Drivers"){
+                    Ref.child("licence").setValue(licence);
+                }
+
+
+            }
+        });
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -78,18 +151,26 @@ public class Edit_Profile extends AppCompatActivity {
                 {
 
                     case R.id.nav_profile:
-                        Intent intent = new Intent(Edit_Profile.this,View_Profile.class);
+                        intent = new Intent(Edit_Profile.this,View_Profile.class);
+                        intent.putExtra("Type","Drivers");
+                        intent.putExtra("uid",FirebaseAuth.getInstance().getCurrentUser().getUid());
                         startActivity(intent);
                         break;
                     case R.id.nav_edit_profile:
                         intent = new Intent(Edit_Profile.this, Edit_Profile.class);
+                        intent.putExtra("Type","Drivers");
+                        intent.putExtra("uid",FirebaseAuth.getInstance().getCurrentUser().getUid());
                         startActivity(intent);
                         break;
                     case R.id.nav_Logout:
-                        FirebaseAuth.getInstance().signOut();break;
+
+                        FirebaseAuth.getInstance().signOut();
+                        startActivity(new Intent(Edit_Profile.this,MainMenu.class));
+                        break;
+
                     case R.id.nav_change_password:
 
-                        auth.sendPasswordResetEmail((String) email.getText())
+                        FirebaseAuth.getInstance().sendPasswordResetEmail((String) email.getText())
                                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
@@ -101,7 +182,9 @@ public class Edit_Profile extends AppCompatActivity {
                         break;
 
                     case R.id.nav_History:
-                        Toast.makeText(Edit_Profile.this, "History",Toast.LENGTH_SHORT).show();break;
+                        intent = new Intent(Edit_Profile.this, History.class);
+                        intent.putExtra("uid",FirebaseAuth.getInstance().getCurrentUser().getUid());
+                        startActivity(intent);
                     default:
                         return true;
 
