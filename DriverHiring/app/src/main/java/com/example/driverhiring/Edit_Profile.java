@@ -61,7 +61,10 @@ public class Edit_Profile extends AppCompatActivity {
         else{
             navigationView.getMenu().clear();
             navigationView.inflateMenu(R.menu.navigation_menu_customer);
+            Plicence.setVisibility(View.GONE);
         }
+
+
 
 
         FirebaseDatabase.getInstance().getReference("Users").child(Type).child(Uid).addValueEventListener(new ValueEventListener() {
@@ -98,7 +101,9 @@ public class Edit_Profile extends AppCompatActivity {
                 String name = Pname.getText().toString().trim();
                 String phone =Pphone.getText().toString().trim();
                 String address=Paddress.getText().toString().trim();
-                String licence=Plicence.getText().toString().trim();
+
+                DatabaseReference Ref = FirebaseDatabase.getInstance().getReference("Users").child(Type).child(Uid);
+
 
                 if(name.isEmpty()){
                     Pname.setError("name is required");
@@ -116,7 +121,10 @@ public class Edit_Profile extends AppCompatActivity {
                     Paddress.requestFocus();
                     return;
                 }
-                if(Type=="Drivers") {
+
+                if (Type =="Drivers"){
+
+                    String licence=Plicence.getText().toString().trim();
                     if (licence.isEmpty()) {
                         Plicence.setError("Enter the licence number");
                         Plicence.requestFocus();
@@ -127,16 +135,16 @@ public class Edit_Profile extends AppCompatActivity {
                         Plicence.requestFocus();
                         return;
                     }
+
+                    Ref.child("licence").setValue(licence);
                 }
 
-                DatabaseReference Ref = FirebaseDatabase.getInstance().getReference("Users").child(Type).child(Uid);
+
                 Ref.child("name").setValue(name);
                 Ref.child("phone").setValue(phone);
                 Ref.child("address").setValue(address);
 
-                if (Type=="Drivers"){
-                    Ref.child("licence").setValue(licence);
-                }
+                Toast.makeText(Edit_Profile.this, "Details Updated", Toast.LENGTH_SHORT).show();
 
 
             }
@@ -152,13 +160,13 @@ public class Edit_Profile extends AppCompatActivity {
 
                     case R.id.nav_profile:
                         intent = new Intent(Edit_Profile.this,View_Profile.class);
-                        intent.putExtra("Type","Drivers");
+                        intent.putExtra("Type",Type);
                         intent.putExtra("uid",FirebaseAuth.getInstance().getCurrentUser().getUid());
                         startActivity(intent);
                         break;
                     case R.id.nav_edit_profile:
                         intent = new Intent(Edit_Profile.this, Edit_Profile.class);
-                        intent.putExtra("Type","Drivers");
+                        intent.putExtra("Type",Type);
                         intent.putExtra("uid",FirebaseAuth.getInstance().getCurrentUser().getUid());
                         startActivity(intent);
                         break;

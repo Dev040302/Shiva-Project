@@ -52,16 +52,22 @@
         <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/drawable/btn_sign_in_background.xml" value="0.25052083333333336" />
         <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/drawable/google_logo.xml" value="0.152" />
         <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/accepted.xml" value="0.25" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_Driver_ride.xml" value="0.25" />
         <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_booking.xml" value="0.25" />
         <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_customer.xml" value="0.234375" />
-        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_customer_booking.xml" value="0.25" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_customer_booking.xml" value="0.176" />
         <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_customer_reg.xml" value="0.234375" />
         <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_driver.xml" value="0.25" />
         <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_driver_bookings.xml" value="0.264" />
         <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_driver_reg.xml" value="0.234375" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_driver_ride.xml" value="0.25" />
         <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_edit_profile.xml" value="0.25" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_main_menu.xml" value="0.26875" />
         <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_map.xml" value="0.25" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_start.xml" value="0.1935185185185185" />
         <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/activity_view_profile.xml" value="0.25" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/customer_dialogue_box.xml" value="0.25" />
+        <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/driver_dialog_box.xml" value="0.25" />
         <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/nav_header.xml" value="0.25" />
         <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/layout/orders.xml" value="0.25" />
         <entry key="..\:/Shiva Project/Shiva-Project/DriverHiring/app/src/main/res/menu/navigation_menu_customer.xml" value="0.4" />

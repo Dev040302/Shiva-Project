@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Customer_login extends AppCompatActivity {
 
@@ -86,7 +87,17 @@ public class Customer_login extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            startActivity(new Intent(Customer_login.this,start.class));
+                            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                            if(user.isEmailVerified()){
+                                startActivity(new Intent(Customer_login.this,start.class));
+
+
+                            }
+                            else{
+                                user.sendEmailVerification();
+                                Toast.makeText(Customer_login.this, "Your Email is not verified yet\n Verification mail has been send again", Toast.LENGTH_LONG).show();
+                            }
+
                         }
                         else
                         {

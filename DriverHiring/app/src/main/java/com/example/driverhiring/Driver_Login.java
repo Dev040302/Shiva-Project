@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Driver_Login extends AppCompatActivity {
 
@@ -60,7 +61,16 @@ public class Driver_Login extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            //Toast.makeText(Driver_Login.this,"Registered successfully",Toast.LENGTH_LONG).show();
+                            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                            if(user.isEmailVerified()){
+                                startActivity(new Intent(Driver_Login.this,Driver_Bookings.class));
+
+
+                            }
+                            else{
+                                user.sendEmailVerification();
+                                Toast.makeText(Driver_Login.this, "Your Email is not verified yet\n Verification mail has been send again", Toast.LENGTH_LONG).show();
+                            }
                             startActivity(new Intent(Driver_Login.this,Driver_Bookings.class));
 
                         }

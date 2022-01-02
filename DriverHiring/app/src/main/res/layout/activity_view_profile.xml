@@ -23,7 +23,8 @@
                 android:layout_height="?attr/actionBarSize"
                 app:title="Bookings"
                 app:titleTextColor="@color/white"
-                app:navigationIcon="@drawable/ic_baseline_menu_24"/>
+                app:navigationIcon="@drawable/ic_baseline_menu_24"
+                android:backgroundTint="@color/black2"/>
 
 
         </com.google.android.material.appbar.AppBarLayout>
@@ -33,7 +34,7 @@
             android:layout_height="wrap_content"
             android:text="PROFILE"
             android:layout_centerHorizontal="true"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="32sp"
             android:layout_below="@id/bar"
             android:layout_margin="16dp"
@@ -42,11 +43,11 @@
             />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Email"
             android:layout_centerHorizontal="true"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="30sp"
             android:layout_below="@id/profile"
             android:layout_margin="16dp"
@@ -55,11 +56,11 @@
             />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Name"
             android:layout_centerHorizontal="true"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="24sp"
             android:layout_below="@id/mail"
             android:layout_margin="8dp"
@@ -67,11 +68,11 @@
             />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Number"
             android:layout_centerHorizontal="true"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="24sp"
             android:layout_below="@id/name"
             android:layout_margin="8dp"
@@ -79,11 +80,11 @@
             />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Address"
             android:layout_centerHorizontal="true"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="24sp"
             android:layout_below="@id/number"
             android:layout_margin="8dp"
@@ -91,11 +92,11 @@
             />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Password"
             android:layout_centerHorizontal="true"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="24sp"
             android:layout_below="@id/address"
             android:layout_margin="8dp"
@@ -103,11 +104,11 @@
             />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Licence"
             android:layout_centerHorizontal="true"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="24sp"
             android:layout_below="@id/password"
             android:layout_margin="8dp"

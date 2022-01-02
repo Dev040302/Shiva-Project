@@ -75,15 +75,15 @@ public class View_Profile extends AppCompatActivity {
 
                 name.setText(nametxt);
                 email.setText(emailtxt);
-                mail.setText(emailtxt);
-                name1.setText(nametxt);
+                mail.setText("Mail : "+emailtxt);
+                name1.setText("Name : "+nametxt);
 
-                phone.setText(snapshot.child("phone").getValue(String.class));
-                address.setText(snapshot.child("address").getValue(String.class));
-                password.setText(snapshot.child("password").getValue(String.class));
+                phone.setText("Phone : "+snapshot.child("phone").getValue(String.class));
+                address.setText("Address : "+snapshot.child("address").getValue(String.class));
+                password.setText("Password : "+snapshot.child("password").getValue(String.class));
 
                 if(Type != "Drivers"){
-                    licence.setText(snapshot.child("licence").getValue(String.class));
+                    licence.setText("Licence : "+snapshot.child("licence").getValue(String.class));
                 }
 
             }
@@ -113,13 +113,13 @@ public class View_Profile extends AppCompatActivity {
 
                     case R.id.nav_profile:
                         intent = new Intent(View_Profile.this,View_Profile.class);
-                        intent.putExtra("Type","Drivers");
+                        intent.putExtra("Type",Type);
                         intent.putExtra("uid",FirebaseAuth.getInstance().getCurrentUser().getUid());
                         startActivity(intent);
                         break;
                     case R.id.nav_edit_profile:
                         intent = new Intent(View_Profile.this, Edit_Profile.class);
-                        intent.putExtra("Type","Drivers");
+                        intent.putExtra("Type",Type);
                         intent.putExtra("uid",FirebaseAuth.getInstance().getCurrentUser().getUid());
                         startActivity(intent);
                         break;

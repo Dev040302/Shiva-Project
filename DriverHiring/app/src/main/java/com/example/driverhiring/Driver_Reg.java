@@ -11,9 +11,12 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Driver_Reg extends AppCompatActivity {
@@ -96,23 +99,39 @@ public class Driver_Reg extends AppCompatActivity {
 
                                 if(task.isSuccessful()){
 
-                                    Driver_Users user = new Driver_Users(name,email,phone,address,licence,password);
+                                    FirebaseUser fuser= FirebaseAuth.getInstance().getCurrentUser();
 
-                                    FirebaseDatabase.getInstance().getReference("Users").child("Drivers")
-                                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                            .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    fuser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>(){
                                         @Override
-                                        public void onComplete(@NonNull Task<Void> task) {
-                                            if(task.isSuccessful()){
-                                                Toast.makeText(Driver_Reg.this,"Registered successfully",Toast.LENGTH_LONG).show();
-                                                startActivity(new Intent(Driver_Reg.this,Driver_Bookings.class));
+                                        public void onSuccess(@NonNull Void unused) {
+                                            Toast.makeText(Driver_Reg.this,"Verification Email Has been Sent",Toast.LENGTH_LONG).show();
 
-                                            }
-                                            else {
-                                                Toast.makeText(Driver_Reg.this,"failed to register",Toast.LENGTH_LONG).show();
-                                            }
+                                            Driver_Users user = new Driver_Users(name,email,phone,address,licence,password);
+
+                                            FirebaseDatabase.getInstance().getReference("Users").child("Drivers")
+                                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<Void> task) {
+                                                    if(task.isSuccessful()){
+                                                        startActivity(new Intent(Driver_Reg.this,Driver_Login.class));
+
+                                                    }
+                                                    else {
+                                                        Toast.makeText(Driver_Reg.this,"failed to register",Toast.LENGTH_LONG).show();
+                                                    }
+                                                }
+                                            });
+                                        }
+
+                                    }).addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            Toast.makeText(Driver_Reg.this,e.getMessage(),Toast.LENGTH_LONG).show();
                                         }
                                     });
+
+
                                 }
                                 else{
                                     Toast.makeText(Driver_Reg.this,"failed to register",Toast.LENGTH_LONG).show();

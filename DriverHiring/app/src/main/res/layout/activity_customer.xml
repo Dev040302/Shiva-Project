@@ -81,30 +81,13 @@
         android:text="LOGIN"
         android:backgroundTint="#4a86ff"
         android:textColor="@color/white"
-        android:layout_above="@id/google"
+        android:layout_above="@id/view"
         android:layout_marginHorizontal="16dp"
         app:cornerRadius="8dp"
         android:layout_marginBottom="16dp"/>
 
 
-    <com.google.android.material.button.MaterialButton
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="match_parent"
-        android:layout_height="42dp"
-        android:layout_above="@+id/view"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/white"
-        android:text="Sign in with Google"
-        app:cornerRadius="8dp"
-        android:textColor="@color/black"
-        app:icon="@drawable/google"
-        app:iconTint="@null"
-        app:iconGravity="textStart"
-        android:id="@+id/google"/>
+
 
     <View
         android:layout_width="match_parent"

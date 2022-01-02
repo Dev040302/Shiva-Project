@@ -11,9 +11,6 @@
         android:id="@+id/nav_edit_profile"
         android:title="Edit Profile" />
 
-    <item
-        android:id="@+id/nav_History"
-        android:title="History"/>
 
     <item
         android:id="@+id/nav_change_password"

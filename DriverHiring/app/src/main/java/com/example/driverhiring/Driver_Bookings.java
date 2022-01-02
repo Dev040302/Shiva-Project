@@ -43,7 +43,7 @@ public class Driver_Bookings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver_bookings);
 
-        //getSupportActionBar().hide();
+        getSupportActionBar().hide();
 
         MaterialToolbar toolbar = findViewById(R.id.topAppBar);
         DrawerLayout drawerLayout = findViewById(R.id.drawer);
