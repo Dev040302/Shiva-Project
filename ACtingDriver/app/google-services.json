@@ -1,121 +1,33 @@
 {
   "project_info": {
-    "project_number": "133111545608",
-    "firebase_url": "https://developments-a5a72-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "developments-a5a72",
-    "storage_bucket": "developments-a5a72.appspot.com"
+    "project_number": "675816711489",
+    "project_id": "ambulance-6f1a1",
+    "storage_bucket": "ambulance-6f1a1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:133111545608:android:13e5bb8cbcc82fa4ac76bd",
+        "mobilesdk_app_id": "1:675816711489:android:5ab5523c1910db9d4e2dc0",
         "android_client_info": {
           "package_name": "com.example.actingdriver"
         }
       },
       "oauth_client": [
         {
-          "client_id": "133111545608-5g5bmkbc8befn6t9iosr6rtqekh4r56j.apps.googleusercontent.com",
+          "client_id": "675816711489-37c2g86mbqfo3p3kjn8pjmckvplqvm4e.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD6hyWbmv88MAspo3CfGSKKocaWPkA8QuE"
+          "current_key": "AIzaSyCeBjsXIBkBfBPEU-QgiWH4aYr9J6zXTIY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "133111545608-5g5bmkbc8befn6t9iosr6rtqekh4r56j.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:133111545608:android:07a1d463da05b887ac76bd",
-        "android_client_info": {
-          "package_name": "com.iramml.uberclone.driverapp"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "133111545608-5g5bmkbc8befn6t9iosr6rtqekh4r56j.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyD6hyWbmv88MAspo3CfGSKKocaWPkA8QuE"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "133111545608-5g5bmkbc8befn6t9iosr6rtqekh4r56j.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:133111545608:android:2c0c11c24cb12c92ac76bd",
-        "android_client_info": {
-          "package_name": "com.iramml.uberclone.riderapp"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "133111545608-5g5bmkbc8befn6t9iosr6rtqekh4r56j.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyD6hyWbmv88MAspo3CfGSKKocaWPkA8QuE"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "133111545608-5g5bmkbc8befn6t9iosr6rtqekh4r56j.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:133111545608:android:56a1842f209df021ac76bd",
-        "android_client_info": {
-          "package_name": "com.simcoder.uber"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "133111545608-5g5bmkbc8befn6t9iosr6rtqekh4r56j.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyD6hyWbmv88MAspo3CfGSKKocaWPkA8QuE"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "133111545608-5g5bmkbc8befn6t9iosr6rtqekh4r56j.apps.googleusercontent.com",
+              "client_id": "675816711489-37c2g86mbqfo3p3kjn8pjmckvplqvm4e.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
