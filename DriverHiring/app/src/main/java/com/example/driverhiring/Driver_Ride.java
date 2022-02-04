@@ -316,11 +316,12 @@ public class Driver_Ride extends AppCompatActivity implements OnMapReadyCallback
 
                     startmar = mMap.addMarker(new MarkerOptions()
                             .position(start).title("Start Position")
-                            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+                            .icon(BitmapDescriptorFactory.fromResource(R.drawable.car)));
+                            //.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
 
                     drivermar = mMap.addMarker(new MarkerOptions()
                             .position(start).title("Driver")
-                            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+                            .icon(BitmapDescriptorFactory.fromResource(R.drawable.location)));
 
                     done=1;
                     got=2;

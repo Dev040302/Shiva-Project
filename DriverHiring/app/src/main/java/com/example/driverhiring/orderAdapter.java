@@ -139,6 +139,7 @@ public class orderAdapter extends FirebaseRecyclerAdapter<
             reference.child(userID).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
+                     //Driver_Users user = snapshot.getValue(Driver_Users.class);
                      Driver_Users user = snapshot.getValue(Driver_Users.class);
                      if(user != null){
                          name = user.name;
@@ -151,28 +152,6 @@ public class orderAdapter extends FirebaseRecyclerAdapter<
 
                 }
             });
-
-            //btn.setOnClickListener(new View.OnClickListener() {
-                //@Override
-                //public void onClick(View v) {
-                    /*final HashMap<String,Object> Details = new HashMap<>();
-                    Details.put("Name",name);
-                    Details.put("phone",phone);
-                    Details.put("uuid",customerid);
-
-                    firestore.collection("ACCEPTANCE").document(auth.getCurrentUser().getUid())//
-                            .collection("CURRENTDRIVER").add(Details).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {//
-                        @Override//
-                        public void onComplete(@NonNull Task<DocumentReference> task) {//
-
-                        }//
-                    });//*/
-
-
-
-                //}
-           // });
-
 
         }
     }

@@ -26,15 +26,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.firebase.geofire.GeoFire;
-import com.firebase.geofire.GeoLocation;
-import com.firebase.geofire.GeoQuery;
-import com.firebase.geofire.GeoQueryEventListener;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.location.LocationListener;
-import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationServices;
+
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -278,7 +270,7 @@ public class Booking extends AppCompatActivity implements OnMapReadyCallback,Pay
 
                         startmar = mMap.addMarker(new MarkerOptions()
                                 .position(start)
-                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.car)));
 
                         stopmar = mMap.addMarker(new MarkerOptions()
                                 .position(stop)
@@ -286,14 +278,14 @@ public class Booking extends AppCompatActivity implements OnMapReadyCallback,Pay
 
                         drivermar = mMap.addMarker(new MarkerOptions()
                                 .position(start)
-                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.location)));
 
                         done=1;
 
                     }
 
-                    Double a = snapshot.child("Driver's Position").child("latitude").getValue(Double.class);
-                    Double b = snapshot.child("Driver's Position").child("longitude").getValue(Double.class);
+                    Double a = snapshot.child("Drivers'Position").child("latitude").getValue(Double.class);
+                    Double b = snapshot.child("Drivers'Position").child("longitude").getValue(Double.class);
 
                     driver= new LatLng(a,b);
 
