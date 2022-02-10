@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\SHIVA\\OneDrive\\Documents\\GitHub\\Shiva-Project\\ACtingDriver\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rGT\\values-es-rGT.xml",
+            "outputFile": "E:\\Android Apps\\ACtingDriver\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rGT\\values-es-rGT.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\SHIVA\\.gradle\\caches\\transforms-3\\ef39f30fb29768f672a7330af937e966\\transformed\\jetified-android-image-cropper-2.8.0\\res\\values-es-rGT\\values-es-rGT.xml",
+                    "source": "C:\\Users\\devan\\.gradle\\caches\\transforms-3\\ef39f30fb29768f672a7330af937e966\\transformed\\jetified-android-image-cropper-2.8.0\\res\\values-es-rGT\\values-es-rGT.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
