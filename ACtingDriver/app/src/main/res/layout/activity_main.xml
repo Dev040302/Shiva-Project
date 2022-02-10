@@ -8,28 +8,29 @@
 
     <Button
         android:id="@+id/customer_welcome_btn"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="131dp"
-        android:background="@android:color/holo_red_dark"
-        android:text="Customer"
-        android:textAllCaps="false"
-        android:textColor="@android:color/background_light"
-        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="CUSTOMER"
+        android:layout_marginHorizontal="16dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/driver_welcome_btn" />
+        android:layout_marginBottom="80dp"/>
 
     <Button
         android:id="@+id/driver_welcome_btn"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:background="@android:color/background_light"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
         android:text="Driver"
-        android:textAllCaps="false"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="18sp"
-        android:layout_above="@+id/customer_welcome_btn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="11dp" />
+        android:layout_marginHorizontal="16dp"
+        android:layout_above="@id/customer_welcome_btn"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/admin_welcome_btn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="ADMIN"
+        android:layout_marginHorizontal="16dp"
+        android:layout_above="@id/driver_welcome_btn"
+        android:layout_marginBottom="16dp" />
 
 </RelativeLayout>

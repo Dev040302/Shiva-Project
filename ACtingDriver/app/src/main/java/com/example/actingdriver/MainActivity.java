@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     private Button DriverWelcomeButton;
-    private Button CustomerWelcomeButton;
+    private Button CustomerWelcomeButton,admin;
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener firebaseAuthListner;
@@ -49,6 +49,15 @@ public class MainActivity extends AppCompatActivity {
 
         DriverWelcomeButton = (Button) findViewById(R.id.driver_welcome_btn);
         CustomerWelcomeButton = (Button) findViewById(R.id.customer_welcome_btn);
+        admin=findViewById(R.id.admin_welcome_btn);
+
+        admin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent adminIntent = new Intent(MainActivity.this, AdminLogin.class);
+                startActivity(adminIntent);
+            }
+        });
 
         DriverWelcomeButton.setOnClickListener(new View.OnClickListener() {
             @Override
