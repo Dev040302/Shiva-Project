@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Shiva Project/Shiva-Project/ACtingDriver/app/src/main/res/layout/activity_admin.xml" value="0.25" />
+        <entry key="..\:/Shiva Project/Shiva-Project/ACtingDriver/app/src/main/res/layout/activity_admin1.xml" value="0.25" />
         <entry key="..\:/Shiva Project/Shiva-Project/ACtingDriver/app/src/main/res/layout/activity_admin_login.xml" value="0.25" />
         <entry key="..\:/Shiva Project/Shiva-Project/ACtingDriver/app/src/main/res/layout/activity_customer_login_register.xml" value="0.25" />
+        <entry key="..\:/Shiva Project/Shiva-Project/ACtingDriver/app/src/main/res/layout/activity_driver_login_register.xml" value="0.25" />
         <entry key="..\:/Shiva Project/Shiva-Project/ACtingDriver/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
       </map>
     </option>

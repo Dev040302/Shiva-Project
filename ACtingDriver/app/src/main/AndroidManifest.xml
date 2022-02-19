@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ACtingDriver">
         <activity
+            android:name=".Admin"
+            android:exported="false" />
+        <activity
             android:name=".AdminLogin"
             android:exported="false" />
         <activity

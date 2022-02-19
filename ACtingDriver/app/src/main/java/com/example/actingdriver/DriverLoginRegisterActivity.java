@@ -23,10 +23,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class DriverLoginRegisterActivity extends AppCompatActivity {
 
-    private TextView CreateDriverAccount;
+    //private TextView CreateDriverAccount;
     private TextView TitleDriver;
     private Button LoginDriverButton;
-    private Button RegisterDriverButton;
+    //private Button RegisterDriverButton;
     private EditText DriverEmail;
     private EditText DriverPassword;
 
@@ -62,81 +62,12 @@ public class DriverLoginRegisterActivity extends AppCompatActivity {
 //        };
 
 
-        CreateDriverAccount = (TextView) findViewById(R.id.create_driver_account);
+
         TitleDriver = (TextView) findViewById(R.id.titlr_driver);
         LoginDriverButton = (Button) findViewById(R.id.login_driver_btn);
-        RegisterDriverButton = (Button) findViewById(R.id.register_driver_btn);
         DriverEmail = (EditText) findViewById(R.id.driver_email);
         DriverPassword = (EditText) findViewById(R.id.driver_password);
         loadingBar = new ProgressDialog(this);
-
-
-        RegisterDriverButton.setVisibility(View.INVISIBLE);
-        RegisterDriverButton.setEnabled(false);
-
-        CreateDriverAccount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view)
-            {
-                CreateDriverAccount.setVisibility(View.INVISIBLE);
-                LoginDriverButton.setVisibility(View.INVISIBLE);
-                TitleDriver.setText("Driver Registration");
-
-                RegisterDriverButton.setVisibility(View.VISIBLE);
-                RegisterDriverButton.setEnabled(true);
-            }
-        });
-
-
-        RegisterDriverButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view)
-            {
-                String email = DriverEmail.getText().toString();
-                String password = DriverPassword.getText().toString();
-
-                if(TextUtils.isEmpty(email))
-                {
-                    Toast.makeText(DriverLoginRegisterActivity.this, "Please write your Email...", Toast.LENGTH_SHORT).show();
-                }
-
-                if(TextUtils.isEmpty(password))
-                {
-                    Toast.makeText(DriverLoginRegisterActivity.this, "Please write your Password...", Toast.LENGTH_SHORT).show();
-                }
-
-                else
-                {
-                    loadingBar.setTitle("Please wait :");
-                    loadingBar.setMessage("While system is performing processing on your data...");
-                    loadingBar.show();
-
-                    mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task)
-                        {
-                            if(task.isSuccessful())
-                            {
-                                currentUserId = mAuth.getCurrentUser().getUid();
-                                driversDatabaseRef = FirebaseDatabase.getInstance().getReference().child("Users").child("Drivers").child(currentUserId);
-                                driversDatabaseRef.setValue(true);
-
-                                Intent intent = new Intent(DriverLoginRegisterActivity.this, DriverMapActivity.class);
-                                startActivity(intent);
-
-                                loadingBar.dismiss();
-                            }
-                            else
-                            {
-                                Toast.makeText(DriverLoginRegisterActivity.this, "Please Try Again. Error Occurred, while registering... ", Toast.LENGTH_SHORT).show();
-
-                                loadingBar.dismiss();
-                            }
-                        }
-                    });
-                }
-            }
-        });
 
 
         LoginDriverButton.setOnClickListener(new View.OnClickListener() {
