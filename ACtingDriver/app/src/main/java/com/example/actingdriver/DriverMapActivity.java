@@ -69,7 +69,6 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
     private ValueEventListener AssignedCustomerPickUpRefListner;
 
     private TextView txtName, txtPhone;
-    private CircleImageView profilePic;
     private RelativeLayout relativeLayout;
 
 
@@ -88,7 +87,6 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
 
         txtName = findViewById(R.id.name_customer);
         txtPhone = findViewById(R.id.phone_customer);
-        profilePic = findViewById(R.id.profile_image_customer);
         relativeLayout = findViewById(R.id.rel2);
 
 
@@ -368,7 +366,6 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
                     if (dataSnapshot.hasChild("image"))
                     {
                         String image = dataSnapshot.child("image").getValue().toString();
-                        Picasso.get().load(image).into(profilePic);
                     }
                 }
             }
