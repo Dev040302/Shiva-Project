@@ -48,41 +48,12 @@
     </com.google.android.material.appbar.AppBarLayout>
 
 
-
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile_image"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/profile"
-        app:civ_border_width="2dp"
-        app:civ_border_color="#c880ff"
-        android:layout_below="@+id/app_bar_settings"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        />
-
-
-    <TextView
-        android:id="@+id/change_picture_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/profile_image"
-        android:text="Change Picture"
-        android:layout_centerHorizontal="true"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        android:layout_marginTop="5dp"
-        android:textColor="@color/design_default_color_primary_dark"
-        />
-
-
     <EditText
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="your Name"
-        android:layout_below="@+id/change_picture_btn"
+        android:layout_below="@+id/app_bar_settings"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="15dp"

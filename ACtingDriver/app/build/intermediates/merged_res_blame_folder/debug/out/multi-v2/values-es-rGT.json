@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Android Apps\\ACtingDriver\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rGT\\values-es-rGT.xml",
+            "outputFile": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rGT\\values-es-rGT.xml",
             "map": [
                 {
                     "source": "C:\\Users\\devan\\.gradle\\caches\\transforms-3\\ef39f30fb29768f672a7330af937e966\\transformed\\jetified-android-image-cropper-2.8.0\\res\\values-es-rGT\\values-es-rGT.xml",

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Android Apps\\ACtingDriver\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ar\\values-ar.xml",
+            "outputFile": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ar\\values-ar.xml",
             "map": [
                 {
                     "source": "C:\\Users\\devan\\.gradle\\caches\\transforms-3\\3c9eb5accf48c58e86651cd5a65fb6e3\\transformed\\jetified-play-services-base-18.0.0\\res\\values-ar\\values.xml",

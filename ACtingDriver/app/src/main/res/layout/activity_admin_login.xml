@@ -7,24 +7,21 @@
     tools:context=".AdminLogin">
 
     <EditText
-        android:id="@+id/customer_email"
+        android:id="@+id/id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_marginTop="55dp"
-        android:ems="10"
-        android:hint="ID"
-        android:inputType="textEmailAddress" />
+        android:hint="ID"/>
 
     <EditText
-        android:id="@+id/customer_password"
+        android:id="@+id/pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
         android:ems="10"
         android:hint="Password..."
-        android:inputType="textPassword"
-        android:layout_below="@+id/customer_email"
+        android:layout_below="@+id/id"
         android:layout_alignParentStart="true" />
 
     <Button

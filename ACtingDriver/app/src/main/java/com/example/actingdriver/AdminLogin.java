@@ -27,8 +27,8 @@ public class AdminLogin extends AppCompatActivity {
         setContentView(R.layout.activity_admin_login);
 
 
-        emailtxt=findViewById(R.id.customer_email);
-        passwordtxt=findViewById(R.id.customer_password);
+        emailtxt=findViewById(R.id.id);
+        passwordtxt=findViewById(R.id.pass);
         login=findViewById(R.id.customer_login_btn);
         ProgressDialog loadingBar = new ProgressDialog(this);
 
@@ -56,13 +56,12 @@ public class AdminLogin extends AppCompatActivity {
                     loadingBar.setMessage("While system is performing processing on your data...");
                     loadingBar.show();
 
-                    if(email=="12345678" && password=="12345678"){
+
                         Intent intent = new Intent(AdminLogin.this, Admin.class);
                         startActivity(intent);
-                    }
-                    else{
-                        Toast.makeText(AdminLogin.this, "Wrong ID and Password", Toast.LENGTH_SHORT).show();
-                    }
+
+
+
                 }
             }
         });

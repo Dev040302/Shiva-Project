@@ -13,6 +13,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Include required permissions for Google Maps API to run. -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <uses-feature
@@ -35,6 +37,12 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.ACtingDriver" >
+        <activity
+            android:name="com.example.actingdriver.Admin"
+            android:exported="false" />
+        <activity
+            android:name="com.example.actingdriver.AdminLogin"
+            android:exported="false" />
         <activity
             android:name="com.example.actingdriver.DriverLoginRegisterActivity"
             android:exported="false" />
@@ -75,6 +83,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- Needs to be explicitly declared on P+ -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.example.actingdriver.com.squareup.picasso"
+            android:exported="false" />
+
         <activity
             android:name="com.google.firebase.auth.internal.GenericIdpActivity"
             android:excludeFromRecents="true"
@@ -135,15 +153,7 @@
             <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
-        </service> <!-- Needs to be explicitly declared on P+ -->
-        <uses-library
-            android:name="org.apache.http.legacy"
-            android:required="false" />
-
-        <provider
-            android:name="com.squareup.picasso.PicassoProvider"
-            android:authorities="com.example.actingdriver.com.squareup.picasso"
-            android:exported="false" />
+        </service>
 
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
