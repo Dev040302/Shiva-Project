@@ -66,7 +66,6 @@ public class SettingsActivity extends AppCompatActivity {
 
 
 
-        profileImageView = findViewById(R.id.profile_image);
 
         nameEditText = findViewById(R.id.name);
         phoneEditText = findViewById(R.id.phone_number);
@@ -80,7 +79,6 @@ public class SettingsActivity extends AppCompatActivity {
         closeButton = findViewById(R.id.close_button);
         saveButton = findViewById(R.id.save_button);
 
-        profileChangeBtn = findViewById(R.id.change_picture_btn);
 
 
 
