@@ -21,6 +21,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+
 public class CustomerLoginRegisterActivity extends AppCompatActivity {
 
     private TextView CreateCustomerAccount;
@@ -28,7 +30,7 @@ public class CustomerLoginRegisterActivity extends AppCompatActivity {
     private Button LoginCustomerButton;
     private Button RegisterCustomerButton;
     private EditText CustomerEmail;
-    private EditText CustomerPassword;
+    private EditText CustomerPassword,nametxt,notxt;
 
     private DatabaseReference customersDatabaseRef;
     private FirebaseAuth mAuth;
@@ -38,13 +40,6 @@ public class CustomerLoginRegisterActivity extends AppCompatActivity {
 
     private FirebaseUser currentUser;
     String currentUserId;
-
-
-
-
-
-
-
 
 
     @Override
@@ -71,6 +66,8 @@ public class CustomerLoginRegisterActivity extends AppCompatActivity {
 
 
 
+        nametxt=findViewById(R.id.Driver_name);
+        notxt=findViewById(R.id.Driver_phonenumber);
 
 
         CreateCustomerAccount = (TextView) findViewById(R.id.customer_register_link);
@@ -94,6 +91,8 @@ public class CustomerLoginRegisterActivity extends AppCompatActivity {
                 TitleCustomer.setText("Driver Registration");
 
                 RegisterCustomerButton.setVisibility(View.VISIBLE);
+                nametxt.setVisibility(View.VISIBLE);
+                notxt.setVisibility(View.VISIBLE);
                 RegisterCustomerButton.setEnabled(true);
             }
         });
@@ -105,6 +104,8 @@ public class CustomerLoginRegisterActivity extends AppCompatActivity {
             {
                 String email = CustomerEmail.getText().toString();
                 String password = CustomerPassword.getText().toString();
+                String name = nametxt.getText().toString();
+                String no = notxt.getText().toString();
 
                 if(TextUtils.isEmpty(email))
                 {
@@ -114,6 +115,15 @@ public class CustomerLoginRegisterActivity extends AppCompatActivity {
                 if(TextUtils.isEmpty(password))
                 {
                     Toast.makeText(CustomerLoginRegisterActivity.this, "Please write your Password...", Toast.LENGTH_SHORT).show();
+                }
+                if(TextUtils.isEmpty(name))
+                {
+                    Toast.makeText(CustomerLoginRegisterActivity.this, "Please write your name...", Toast.LENGTH_SHORT).show();
+                }
+
+                if(TextUtils.isEmpty(no))
+                {
+                    Toast.makeText(CustomerLoginRegisterActivity.this, "Please write your Phone-number...", Toast.LENGTH_SHORT).show();
                 }
 
                 else
@@ -131,6 +141,14 @@ public class CustomerLoginRegisterActivity extends AppCompatActivity {
                                 currentUserId = mAuth.getCurrentUser().getUid();
                                 customersDatabaseRef = FirebaseDatabase.getInstance().getReference().child("Users").child("Customers").child(currentUserId);
                                 customersDatabaseRef.setValue(true);
+
+                                HashMap<String, Object> userMap = new HashMap<>();
+                                userMap.put("uid", mAuth.getCurrentUser().getUid());
+                                userMap.put("name", name);
+                                userMap.put("phone", no);
+
+                                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child("Customers");
+                                databaseReference.child(mAuth.getCurrentUser().getUid()).setValue(userMap);
 
                                 Intent intent = new Intent(CustomerLoginRegisterActivity.this, CustomersMapActivity.class);
                                 startActivity(intent);

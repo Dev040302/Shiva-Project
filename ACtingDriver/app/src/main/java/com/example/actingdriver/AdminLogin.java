@@ -26,7 +26,6 @@ public class AdminLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_login);
 
-
         emailtxt=findViewById(R.id.id);
         passwordtxt=findViewById(R.id.pass);
         login=findViewById(R.id.customer_login_btn);
@@ -37,7 +36,7 @@ public class AdminLogin extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                
+
                 String email = emailtxt.getText().toString();
                 String password = passwordtxt.getText().toString();
 
@@ -57,9 +56,14 @@ public class AdminLogin extends AppCompatActivity {
                     loadingBar.setMessage("While system is performing processing on your data...");
                     loadingBar.show();
 
-
+                    String a="12345678",b="12345678";
+                    if(email.equals("12345678") && password.equals("12345678")){
                         Intent intent = new Intent(AdminLogin.this, Admin.class);
-                        startActivity(intent);
+                        startActivity(intent);}
+                    else{
+                        Toast.makeText(AdminLogin.this, "Wrong Credietials", Toast.LENGTH_SHORT).show();
+                        loadingBar.dismiss();
+                    }
 
 
 
