@@ -37,6 +37,7 @@ public class AdminLogin extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
+                
                 String email = emailtxt.getText().toString();
                 String password = passwordtxt.getText().toString();
 
