@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseApp.initializeApp(this);
 
+        getSupportActionBar().hide();
+
         mAuth = FirebaseAuth.getInstance();
 //
 //        firebaseAuthListner = new FirebaseAuth.AuthStateListener() {

@@ -62,8 +62,6 @@ public class DriverLoginRegisterActivity extends AppCompatActivity {
 //        };
 
 
-
-        TitleDriver = (TextView) findViewById(R.id.titlr_driver);
         LoginDriverButton = (Button) findViewById(R.id.login_driver_btn);
         DriverEmail = (EditText) findViewById(R.id.driver_email);
         DriverPassword = (EditText) findViewById(R.id.driver_password);

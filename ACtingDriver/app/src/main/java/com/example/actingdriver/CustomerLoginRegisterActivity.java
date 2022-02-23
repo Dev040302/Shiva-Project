@@ -26,7 +26,6 @@ import java.util.HashMap;
 public class CustomerLoginRegisterActivity extends AppCompatActivity {
 
     private TextView CreateCustomerAccount;
-    private TextView TitleCustomer;
     private Button LoginCustomerButton;
     private Button RegisterCustomerButton;
     private EditText CustomerEmail;
@@ -71,7 +70,6 @@ public class CustomerLoginRegisterActivity extends AppCompatActivity {
 
 
         CreateCustomerAccount = (TextView) findViewById(R.id.customer_register_link);
-        TitleCustomer = (TextView) findViewById(R.id.customer_status);
         LoginCustomerButton = (Button) findViewById(R.id.customer_login_btn);
         RegisterCustomerButton = (Button) findViewById(R.id.customer_register_btn);
         CustomerEmail = (EditText) findViewById(R.id.customer_email);
@@ -88,7 +86,6 @@ public class CustomerLoginRegisterActivity extends AppCompatActivity {
             {
                 CreateCustomerAccount.setVisibility(View.INVISIBLE);
                 LoginCustomerButton.setVisibility(View.INVISIBLE);
-                TitleCustomer.setText("Driver Registration");
 
                 RegisterCustomerButton.setVisibility(View.VISIBLE);
                 nametxt.setVisibility(View.VISIBLE);

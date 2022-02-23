@@ -8,6 +8,10 @@
         "source": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_login_24.xml.flat",
+        "source": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\src\\main\\res\\drawable\\ic_baseline_login_24.xml"
+    },
+    {
         "merged": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\build\\intermediates\\merged_res\\debug\\drawable_profile.png.flat",
         "source": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\src\\main\\res\\drawable\\profile.png"
     },
@@ -68,6 +72,10 @@
         "source": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_close_24.xml.flat",
+        "source": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\src\\main\\res\\drawable\\ic_baseline_close_24.xml"
+    },
+    {
         "merged": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
     },
@@ -94,6 +102,10 @@
     {
         "merged": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\build\\intermediates\\merged_res\\debug\\drawable_user.png.flat",
         "source": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\src\\main\\res\\drawable\\user.png"
+    },
+    {
+        "merged": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_check_24.xml.flat",
+        "source": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\src\\main\\res\\drawable\\ic_baseline_check_24.xml"
     },
     {
         "merged": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
@@ -144,6 +156,10 @@
         "source": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\src\\main\\res\\layout\\activity_driver_login_register.xml"
     },
     {
+        "merged": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\build\\intermediates\\merged_res\\debug\\drawable_ambulance.jpg.flat",
+        "source": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\src\\main\\res\\drawable\\ambulance.jpg"
+    },
+    {
         "merged": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_launcher_foreground.png.flat",
         "source": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_foreground.png"
     },
@@ -158,5 +174,9 @@
     {
         "merged": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\build\\intermediates\\merged_res\\debug\\drawable_logres.png.flat",
         "source": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\src\\main\\res\\drawable\\logres.png"
+    },
+    {
+        "merged": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_person_24.xml.flat",
+        "source": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\src\\main\\res\\drawable\\ic_baseline_person_24.xml"
     }
 ]

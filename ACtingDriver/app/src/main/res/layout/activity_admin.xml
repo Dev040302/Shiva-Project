@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Admin">
+    tools:context=".Admin"
+    android:background="@color/white">
 
     <EditText
         android:id="@+id/customer_email"
@@ -14,7 +15,10 @@
         android:layout_marginTop="55dp"
         android:ems="10"
         android:hint="Email"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:backgroundTint="#70000000"
+        android:textColor="@color/black"
+        android:textColorHint="#70000000"/>
 
     <EditText
         android:id="@+id/customer_password"
@@ -25,7 +29,10 @@
         android:hint="Password..."
         android:inputType="textPassword"
         android:layout_below="@+id/customer_email"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:backgroundTint="#70000000"
+        android:textColor="@color/black"
+        android:textColorHint="#70000000"/>
 
     <EditText
         android:id="@+id/Driver_name"
@@ -34,7 +41,10 @@
         android:layout_marginTop="11dp"
         android:hint="Name"
         android:layout_below="@+id/customer_password"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:backgroundTint="#70000000"
+        android:textColor="@color/black"
+        android:textColorHint="#70000000"/>
 
     <EditText
         android:id="@+id/Driver_phonenumber"
@@ -43,7 +53,10 @@
         android:layout_marginTop="11dp"
         android:hint="Phone Number"
         android:layout_below="@+id/Driver_name"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:backgroundTint="#70000000"
+        android:textColor="@color/black"
+        android:textColorHint="#70000000"/>
 
     <EditText
         android:id="@+id/driver_car_name"
@@ -52,7 +65,10 @@
         android:layout_marginTop="11dp"
         android:hint="Vehical No"
         android:layout_below="@+id/Driver_phonenumber"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:backgroundTint="#70000000"
+        android:textColor="@color/black"
+        android:textColorHint="#70000000"/>
 
 
 
@@ -65,7 +81,8 @@
         android:layout_marginTop="12dp"
         android:layout_marginHorizontal="16dp"
         android:text="Register the Driver"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
 
     <Button
     android:id="@+id/history"
@@ -76,6 +93,7 @@
     android:layout_marginTop="12dp"
     android:layout_marginHorizontal="16dp"
     android:text="View History"
-    android:textSize="20sp" />
+    android:textSize="20sp"
+        android:textColor="@color/white"/>
 
 </RelativeLayout>

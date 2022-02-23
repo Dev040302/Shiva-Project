@@ -13,6 +13,7 @@ import android.location.Location;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -56,8 +57,8 @@ public class CustomersMapActivity extends FragmentActivity implements OnMapReady
     Location LastLocation;
     LocationRequest locationRequest;
 
-    private Button Logout;
-    private Button SettingsButton;
+    private ImageView Logout;
+    private ImageView SettingsButton;
     private Button CallCabCarButton;
     private FirebaseAuth mAuth;
     private FirebaseUser currentUser;
@@ -100,8 +101,8 @@ public class CustomersMapActivity extends FragmentActivity implements OnMapReady
 
 
 
-        Logout = (Button) findViewById(R.id.logout_customer_btn);
-        SettingsButton = (Button) findViewById(R.id.settings_customer_btn);
+        Logout = findViewById(R.id.logout);
+        SettingsButton = findViewById(R.id.profile);
         CallCabCarButton =  (Button) findViewById(R.id.call_a_car_button);
 
         txtName = findViewById(R.id.name_driver);

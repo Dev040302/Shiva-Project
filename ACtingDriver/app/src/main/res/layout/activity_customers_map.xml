@@ -6,12 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".CustomersMapActivity">
 
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#e53935"
+    android:id="@+id/titlebar">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_baseline_person_24"
+        android:id="@+id/profile"
+        android:layout_alignParentLeft="true"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_baseline_login_24"
+        android:id="@+id/logout"
+        android:layout_alignParentRight="true"
+        />
+    </RelativeLayout>
+
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/settings_customer_btn"
+        android:layout_below="@+id/titlebar"
         android:layout_above="@+id/call_a_car_button"
         />
 
@@ -105,31 +127,6 @@
         android:textSize="23sp"
         android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/settings_customer_btn"
-        android:layout_width="190dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="@color/design_default_color_primary"
-        android:text="Settings"
-        android:textAllCaps="false"
-        android:textColor="@android:color/background_light"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/logout_customer_btn"
-        android:layout_width="190dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:background="@color/design_default_color_primary"
-        android:text="Logout"
-        android:textAllCaps="false"
-        android:textColor="@android:color/background_light"
-        android:textSize="15sp"
-        android:textStyle="bold" />
 
 
 </RelativeLayout>

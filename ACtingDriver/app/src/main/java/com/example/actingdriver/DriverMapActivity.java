@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -53,8 +54,8 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
     Location LastLocation;
     LocationRequest locationRequest;
 
-    private Button LogoutDriverBtn;
-    private Button SettingsDriverButton;
+    private ImageView LogoutDriverBtn;
+    private ImageView SettingsDriverButton;
     private FirebaseAuth mAuth;
     private FirebaseUser currentUser;
     private Boolean currentLogOutUserStatus = false;
@@ -82,8 +83,8 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
         driverID = mAuth.getCurrentUser().getUid();
 
 
-        LogoutDriverBtn = (Button) findViewById(R.id.logout_driv_btn);
-        SettingsDriverButton = (Button) findViewById(R.id.settings_driver_btn);
+        LogoutDriverBtn = findViewById(R.id.logout);
+        SettingsDriverButton = findViewById(R.id.profile);
 
         txtName = findViewById(R.id.name_customer);
         txtPhone = findViewById(R.id.phone_customer);
