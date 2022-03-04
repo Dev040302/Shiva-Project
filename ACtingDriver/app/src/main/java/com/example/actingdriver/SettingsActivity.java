@@ -37,10 +37,9 @@ public class SettingsActivity extends AppCompatActivity {
 
     private String getType;
 
-    private CircleImageView profileImageView;
+    TextView title;
     private EditText nameEditText, phoneEditText, driverCarName;
     private ImageView closeButton, saveButton;
-    private TextView profileChangeBtn;
 
     private DatabaseReference databaseReference;
     private FirebaseAuth mAuth;
@@ -69,11 +68,14 @@ public class SettingsActivity extends AppCompatActivity {
 
         nameEditText = findViewById(R.id.name);
         phoneEditText = findViewById(R.id.phone_number);
+        title=findViewById(R.id.title);
 
         driverCarName = findViewById(R.id.driver_car_name);
         if (getType.equals("Drivers"))
         {
             driverCarName.setVisibility(View.VISIBLE);
+            title.setText("DRIVER");
+
         }
 
         closeButton = findViewById(R.id.close_button);
@@ -112,17 +114,7 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
-        profileChangeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view)
-            {
-                checker = "clicked";
 
-                CropImage.activity()
-                        .setAspectRatio(1, 1)
-                        .start(SettingsActivity.this);
-            }
-        });
 
         getUserInformation();
     }
@@ -138,7 +130,7 @@ public class SettingsActivity extends AppCompatActivity {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             imageUri = result.getUri();
 
-            profileImageView.setImageURI(imageUri);
+
         }
         else
         {
@@ -316,7 +308,7 @@ public class SettingsActivity extends AppCompatActivity {
                     if (dataSnapshot.hasChild("image"))
                     {
                         String image = dataSnapshot.child("image").getValue().toString();
-                        Picasso.get().load(image).into(profileImageView);
+
                     }
                 }
             }

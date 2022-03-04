@@ -56,7 +56,7 @@
 33        android:debuggable="true"
 34        android:icon="@mipmap/ic_launcher"
 34-->D:\Shiva Project\Shiva-Project\ACtingDriver\app\src\main\AndroidManifest.xml:13:9-43
-35        android:label="@string/app_name"
+35        android:label="Ambulance Finder"
 35-->D:\Shiva Project\Shiva-Project\ACtingDriver\app\src\main\AndroidManifest.xml:14:9-41
 36        android:roundIcon="@mipmap/ic_launcher_round"
 36-->D:\Shiva Project\Shiva-Project\ACtingDriver\app\src\main\AndroidManifest.xml:15:9-54
@@ -157,13 +157,13 @@
 89-->[com.google.android.gms:play-services-maps:18.0.1] C:\Users\devan\.gradle\caches\transforms-3\764c14d96a26cbc03094f291692b8add\transformed\jetified-play-services-maps-18.0.1\AndroidManifest.xml:41:13-37
 90
 91        <provider
-91-->[com.squareup.picasso:picasso:2.71828] C:\Users\devan\.gradle\caches\transforms-3\3f0bea1b16730179e4660f82d47c8999\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+91-->[com.squareup.picasso:picasso:2.71828] C:\Users\devan\.gradle\caches\transforms-3\12c1711a49bee4e78a354599e58126fb\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
 92            android:name="com.squareup.picasso.PicassoProvider"
-92-->[com.squareup.picasso:picasso:2.71828] C:\Users\devan\.gradle\caches\transforms-3\3f0bea1b16730179e4660f82d47c8999\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+92-->[com.squareup.picasso:picasso:2.71828] C:\Users\devan\.gradle\caches\transforms-3\12c1711a49bee4e78a354599e58126fb\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
 93            android:authorities="com.example.actingdriver.com.squareup.picasso"
-93-->[com.squareup.picasso:picasso:2.71828] C:\Users\devan\.gradle\caches\transforms-3\3f0bea1b16730179e4660f82d47c8999\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+93-->[com.squareup.picasso:picasso:2.71828] C:\Users\devan\.gradle\caches\transforms-3\12c1711a49bee4e78a354599e58126fb\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
 94            android:exported="false" />
-94-->[com.squareup.picasso:picasso:2.71828] C:\Users\devan\.gradle\caches\transforms-3\3f0bea1b16730179e4660f82d47c8999\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+94-->[com.squareup.picasso:picasso:2.71828] C:\Users\devan\.gradle\caches\transforms-3\12c1711a49bee4e78a354599e58126fb\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
 95
 96        <activity
 96-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\devan\.gradle\caches\transforms-3\bc92e791c177c44f8433e6c0958e860f\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:27:9-44:20

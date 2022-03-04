@@ -172,11 +172,11 @@
         "source": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\src\\main\\res\\drawable\\save_edited_info.png"
     },
     {
-        "merged": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\build\\intermediates\\merged_res\\debug\\drawable_logres.png.flat",
-        "source": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\src\\main\\res\\drawable\\logres.png"
-    },
-    {
         "merged": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_person_24.xml.flat",
         "source": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\src\\main\\res\\drawable\\ic_baseline_person_24.xml"
+    },
+    {
+        "merged": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\build\\intermediates\\merged_res\\debug\\drawable_logres.png.flat",
+        "source": "D:\\Shiva Project\\Shiva-Project\\ACtingDriver\\app\\src\\main\\res\\drawable\\logres.png"
     }
 ]
